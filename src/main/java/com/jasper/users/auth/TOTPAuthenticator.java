@@ -51,4 +51,13 @@ public class TOTPAuthenticator {
 	    return truncatedHash % 1000000;
 	  }
 
+    public long[] getCode(String secret) throws InvalidKeyException, NoSuchAlgorithmException {
+        long timeIndex = System.currentTimeMillis() / 1000 / 30;
+        byte[] secretBytes = new Base32().decode(secret);
+        long[] codeTime = new long[2];
+        codeTime[0] = getCode(secretBytes, timeIndex);
+        codeTime[1] = 30 - System.currentTimeMillis() / 1000 % 30;
+        return codeTime;
+    }
+
 }
