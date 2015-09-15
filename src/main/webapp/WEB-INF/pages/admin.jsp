@@ -4,6 +4,7 @@
 <body>
 	<h1>Title : ${title}</h1>
 	<h1>Message : ${message}</h1>
+	<img alt="image"  src="<c:url value="/res/images/logo.png" />">
 
 	<c:url value="/j_spring_security_logout" var="logoutUrl" />
 	<form action="${logoutUrl}" method="post" id="logoutForm">
