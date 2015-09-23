@@ -16,7 +16,7 @@ public class MainController {
 	@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
 	public ModelAndView welcomePage() {
 		ModelAndView model = new ModelAndView();
-		model.addObject("title", "Spring Security Example");
+		model.addObject("title", "Spring Security 2-FA Example");
 		model.addObject("message", "This is welcome page!");
 		model.setViewName("hello");
 		return model;
@@ -26,7 +26,7 @@ public class MainController {
 	@RequestMapping(value = "/admin**", method = RequestMethod.GET)
 	public ModelAndView adminPage() {
 		ModelAndView model = new ModelAndView();
-		model.addObject("title", "Spring Security Custom Login - DB-based 2 FA Authentication");
+		model.addObject("title", "Spring Security 2-FA Authentication");
 		model.addObject("message", "This is protected page and for ROLE_ADMIN only!");
 		model.setViewName("admin");
 

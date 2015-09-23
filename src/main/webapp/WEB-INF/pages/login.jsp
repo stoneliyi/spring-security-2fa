@@ -37,7 +37,7 @@
 </head>
 <body onload='document.loginForm.username.focus();'>
 
-	<h1>Spring Security Custom Login</h1>
+	<h1>Spring Security 2-FA Login</h1>
 
 	<div id="login-box">
 
@@ -73,8 +73,8 @@
 				</tr>
 			</table>
 
-			<input type="hidden" name="${_csrf.parameterName}"
-				value="${_csrf.token}" />
+			<input type="hidden" name="_csrf"
+				value="0d0a7b5b-e8ba-4832-9047-496a691bfd6e" />
 
 		</form>
 	</div>

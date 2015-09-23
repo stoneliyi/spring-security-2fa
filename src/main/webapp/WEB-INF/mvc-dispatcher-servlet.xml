@@ -12,7 +12,7 @@
 
 	<context:component-scan base-package="com.jasper.*" />
 
-	<mvc:annotation-driven/>
+    <!-- <mvc:annotation-driven/> -->
 
 	<mvc:resources mapping="/res/**" location="/res/" />
 
